@@ -1,0 +1,71 @@
+<!--
+  index.html
+
+  This page is used to run the CollectionSpace UI with the UC Berkeley Natural History Collection
+  Object extension plugin, using a local development server.
+
+  Use the command: npm run devserver
+  Then open a browser to: http://localhost:8080
+-->
+<html>
+<head>
+  <meta charset="UTF-8">
+
+  <!--
+    Load the CollectionSpace UI. This places the cspaceUI function into the global namespace.
+    A compatible version of cspace-ui is specified as a development dependency of this package
+    (in package.json), so its distribution bundle will be in node_modules.
+  -->
+  <script src="/node_modules/cspace-ui/dist/cspaceUI.js"></script>
+
+  <!--
+    Load the UC Berkeley Natural History Collection Object extension plugin. This places the
+    cspaceUIPluginExtUCBNHCollectionObject function into the global namespace.
+
+    webpack dev server generates a JS bundle into memory, and updates it as files are edited.
+    This bundle is served from the URL /cspaceUIPluginExtUCBNHCollectionObject.js, but it does not
+    exist in the filesystem.
+  -->
+  <script src="/cspaceUIPluginExtUCBNHCollectionObject.js"></script>
+</head>
+<body>
+  <div id="cspace"></div>
+  <script>
+    const collectionobjectCustomizer = configContext => {
+      const { React } = configContext.lib;
+      const { Field } = configContext.recordComponents;
+      const { extensions } = configContext.config;
+
+      return {
+        recordTypes: {
+          collectionobject: {
+            fields: {
+              document: {
+                ...extensions['ucbnh-collectionobject'].fields,
+              },
+            },
+            forms: {
+              default: {
+                template: React.createElement(
+                  Field, { name: 'document' },
+                    React.createElement(Field, { name: 'objectNumber' }),
+                    extensions['ucbnh-collectionobject'].form,
+                ),
+              },
+            },
+          },
+        },
+      };
+    };
+
+    cspaceUI({
+      serverUrl: 'http://localhost:8180',
+      prettyUrls: true,
+      plugins: [
+        cspaceUIPluginExtUCBNHCollectionObject(),
+        collectionobjectCustomizer,
+      ],
+    });
+  </script>
+</body>
+</html>
