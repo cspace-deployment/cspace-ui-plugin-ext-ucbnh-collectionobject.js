@@ -1,6 +1,6 @@
 {
   "name": "cspace-ui-plugin-ext-ucbnh-collectionobject",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "UC Berkeley Natural History Collection Object extension plugin for the CollectionSpace UI",
   "author": "Ray Lee <rhlee@berkeley.edu>",
   "license": "ECL-2.0",
@@ -39,7 +39,7 @@
     "test-selenium": "wdio wdio.conf.js"
   },
   "dependencies": {
-    "cspace-ui-plugin-ext-locality": "^0.0.4",
+    "cspace-ui-plugin-ext-locality": "^0.0.5",
     "react-intl": "^2.3.0"
   },
   "devDependencies": {
@@ -58,7 +58,7 @@
     "chai-immutable": "^1.6.0",
     "coveralls": "^3.0.0",
     "cross-env": "^2.0.0",
-    "cspace-ui": "^1.0.0-rc.16",
+    "cspace-ui": "^1.0.0-rc.19",
     "css-loader": "^0.28.9",
     "eslint": "^3.2.2",
     "eslint-config-airbnb": "^12.0.0",

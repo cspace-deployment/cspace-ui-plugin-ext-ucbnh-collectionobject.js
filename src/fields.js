@@ -17,7 +17,7 @@ export default (configContext) => {
   } = configContext.configHelpers;
 
   const {
-    DATA_TYPE_BOOLEAN,
+    DATA_TYPE_BOOL,
     DATA_TYPE_DATE,
     DATA_TYPE_INT,
     DATA_TYPE_STRUCTURED_DATE,
@@ -34,6 +34,7 @@ export default (configContext) => {
           ns: 'http://collectionspace.org/services/collectionobject/domain/naturalhistory',
         },
       },
+      ...extensions.locality.fields,
       basicStorageLocation: {
         [config]: {
           messages: defineMessages({
@@ -74,11 +75,11 @@ export default (configContext) => {
               messages: defineMessages({
                 fullName: {
                   id: 'field.collectionobjects_naturalhistory.taxon.fullName',
-                  defaultMessage: 'Taxon name',
+                  defaultMessage: 'Taxon scientific name',
                 },
                 name: {
                   id: 'field.collectionobjects_naturalhistory.taxon.name',
-                  defaultMessage: 'Name',
+                  defaultMessage: 'Scientific name',
                 },
               }),
               view: {
@@ -336,7 +337,7 @@ export default (configContext) => {
           },
           hybridFlag: {
             [config]: {
-              dataType: DATA_TYPE_BOOLEAN,
+              dataType: DATA_TYPE_BOOL,
               messages: defineMessages({
                 name: {
                   id: 'field.collectionobjects_naturalhistory.hybridFlag.name',
@@ -345,6 +346,67 @@ export default (configContext) => {
               }),
               view: {
                 type: CheckboxInput,
+              },
+            },
+          },
+        },
+      },
+      localNameGroupList: {
+        [config]: {
+          view: {
+            type: CompoundInput,
+          },
+        },
+        localNameGroup: {
+          [config]: {
+            messages: defineMessages({
+              name: {
+                id: 'field.collectionobjects_naturalhistory.localNameGroup.name',
+                defaultMessage: 'Local name',
+              },
+            }),
+            repeating: true,
+            view: {
+              type: CompoundInput,
+              props: {
+                tabular: true,
+              },
+            },
+          },
+          localName: {
+            [config]: {
+              messages: defineMessages({
+                fullName: {
+                  id: 'field.collectionobjects_naturalhistory.localName.fullName',
+                  defaultMessage: 'Local name',
+                },
+                name: {
+                  id: 'field.collectionobjects_naturalhistory.localName.name',
+                  defaultMessage: 'Name',
+                },
+              }),
+              view: {
+                type: TextInput,
+              },
+            },
+          },
+          localNameLanguage: {
+            [config]: {
+              messages: defineMessages({
+                fullName: {
+                  id: 'field.collectionobjects_naturalhistory.localNameLanguage.fullName',
+                  defaultMessage: 'Local name language',
+                },
+                name: {
+                  id: 'field.collectionobjects_naturalhistory.localNameLanguage.name',
+                  defaultMessage: 'Language',
+                },
+              }),
+              view: {
+                type: TermPickerInput,
+                props: {
+                  source: 'languages',
+                },
               },
             },
           },
@@ -618,16 +680,16 @@ export default (configContext) => {
           },
         },
       },
-      donorDate: {
+      donorDateGroup: {
         [config]: {
           dataType: DATA_TYPE_STRUCTURED_DATE,
           messages: defineMessages({
             fullName: {
-              id: 'field.collectionobjects_naturalhistory.donorDate.fullName',
+              id: 'field.collectionobjects_naturalhistory.donorDateGroup.fullName',
               defaultMessage: 'Donor date',
             },
             name: {
-              id: 'field.collectionobjects_naturalhistory.donorDate.name',
+              id: 'field.collectionobjects_naturalhistory.donorDateGroup.name',
               defaultMessage: 'Date',
             },
           }),
@@ -846,7 +908,7 @@ export default (configContext) => {
       },
       distribution: {
         [config]: {
-          dataType: DATA_TYPE_BOOLEAN,
+          dataType: DATA_TYPE_BOOL,
           messages: defineMessages({
             name: {
               id: 'field.collectionobjects_naturalhistory.distribution.name',
