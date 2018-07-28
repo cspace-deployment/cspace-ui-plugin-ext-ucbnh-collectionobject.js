@@ -175,6 +175,10 @@ export default (configContext) => {
           identKind: {
             [config]: {
               messages: defineMessages({
+                fullName: {
+                  id: 'field.collectionobjects_naturalhistory.identKind.fullName',
+                  defaultMessage: 'Taxon determination kind',
+                },
                 name: {
                   id: 'field.collectionobjects_naturalhistory.identKind.name',
                   defaultMessage: 'Determination kind',

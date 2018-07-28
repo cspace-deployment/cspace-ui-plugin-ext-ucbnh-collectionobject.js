@@ -6,7 +6,7 @@ import optionLists from './optionLists';
 // This extension needs to be loaded after the locality extension, so make an inner plugin that
 // follows locality in the plugins array.
 
-const plugin = () => (configContext) => ({
+const plugin = () => configContext => ({
   optionLists,
   extensions: {
     'ucbnh-collectionobject': {
@@ -16,7 +16,7 @@ const plugin = () => (configContext) => ({
   },
 });
 
-module.exports = () => configContext => ({
+module.exports = () => ({
   plugins: [
     cspaceUIPluginExtLocality(),
     plugin(),
