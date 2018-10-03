@@ -1045,7 +1045,7 @@ export default (configContext) => {
           view: {
             type: TermPickerInput,
             props: {
-              source: 'collectionobjectvegetationtype',
+              source: 'vegetationtype',
             },
           },
         },
@@ -1121,7 +1121,7 @@ export default (configContext) => {
               view: {
                 type: TermPickerInput,
                 props: {
-                  source: 'collectionobjectmaterialtype',
+                  source: 'materialtype',
                 },
               },
             },
