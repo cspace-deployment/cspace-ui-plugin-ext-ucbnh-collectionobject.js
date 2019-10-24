@@ -1,4 +1,5 @@
 import { defineMessages } from 'react-intl';
+import { computeHybridName } from './utils';
 
 export default (configContext) => {
   const {
@@ -27,12 +28,21 @@ export default (configContext) => {
     extensions,
   } = configContext.config;
 
+  const {
+    Immutable,
+  } = configContext.lib;
+
+  const {
+    formatRefName,
+  } = configContext.formatHelpers;
+
   return {
     'ns2:collectionobjects_naturalhistory': {
       [config]: {
         service: {
           ns: 'http://collectionspace.org/services/collectionobject/domain/naturalhistory',
         },
+        compute: args => computeHybridName(args, formatRefName, Immutable),
       },
       ...extensions.locality.fields,
       basicStorageLocation: {
@@ -318,8 +328,14 @@ export default (configContext) => {
                   defaultMessage: 'Hybrid name',
                 },
               }),
+              searchView: {
+                type: TextInput,
+              },
               view: {
                 type: TextInput,
+                props: {
+                  readOnly: true,
+                },
               },
             },
           },
