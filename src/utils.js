@@ -57,10 +57,10 @@ export const computeHybridName = ({ data }, Immutable, formatRefName) => {
         }
       }
 
-      const updatedTaxonimicGroupMap = Immutable.fromJS({
+      const updatedTaxonomicGroupMap = Immutable.fromJS({
         taxonomicIdentHybridName,
       });
-      newTaxonGroup.push(taxonomicIdentGroup.merge(updatedTaxonimicGroupMap));
+      newTaxonGroup.push(taxonomicIdentGroup.merge(updatedTaxonomicGroupMap));
     }
   }
 

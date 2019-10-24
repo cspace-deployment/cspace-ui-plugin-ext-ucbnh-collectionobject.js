@@ -42,7 +42,7 @@ export default (configContext) => {
         service: {
           ns: 'http://collectionspace.org/services/collectionobject/domain/naturalhistory',
         },
-        compute: args => computeHybridName(args, formatRefName, Immutable),
+        compute: args => computeHybridName(args, Immutable, formatRefName),
       },
       ...extensions.locality.fields,
       basicStorageLocation: {
