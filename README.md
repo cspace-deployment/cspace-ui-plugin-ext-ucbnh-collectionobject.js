@@ -26,7 +26,7 @@ $ npm run devserver
 
 Then open a browser to http://localhost:8080.
 
-By default, the application served from the dev server will use the CollectionSpace services API
+By default, the application served from the dev server uses the CollectionSpace services API
 located at http://localhost:8180.
 
 To run the application against CollectionSpace services located on a different host, edit
