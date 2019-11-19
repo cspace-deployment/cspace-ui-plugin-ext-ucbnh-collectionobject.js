@@ -13,7 +13,7 @@ export const computeHybridName = ({ data }, Immutable, formatRefName) => {
     const affinityTaxon = formatRefName(taxonomicIdentGroup.get('affinityTaxon')) || '';
     const taxonName = formatRefName(taxonomicIdentGroup.get('taxon')) || '';
 
-    if (hybridFlag !== 'true') {
+    if (hybridFlag !== 'true' && hybridFlag !== true) {
       if (affinityTaxon === null) {
         taxonomicIdentHybridName = taxonName;
       } if (affinityTaxon !== null) {
