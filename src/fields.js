@@ -1085,15 +1085,15 @@ export default (configContext) => {
               type: CompoundInput,
             },
           },
-          useType: {
+          accessionUseType: {
             [config]: {
               messages: defineMessages({
                 fullName: {
-                  id: 'field.collectionobjects_naturalhistory.useType.fullName',
+                  id: 'field.collectionobjects_naturalhistory.accessionUseType.fullName',
                   defaultMessage: 'Accession use type',
                 },
                 name: {
-                  id: 'field.collectionobjects_naturalhistory.useType.name',
+                  id: 'field.collectionobjects_naturalhistory.accessionUseType.name',
                   defaultMessage: 'Use type',
                 },
               }),
@@ -1105,15 +1105,15 @@ export default (configContext) => {
               },
             },
           },
-          usedIn: {
+          accessionUsedIn: {
             [config]: {
               messages: defineMessages({
                 fullName: {
-                  id: 'field.collectionobjects_naturalhistory.usedIn.fullName',
+                  id: 'field.collectionobjects_naturalhistory.accessionUsedIn.fullName',
                   defaultMessage: 'Accession used in',
                 },
                 name: {
-                  id: 'field.collectionobjects_naturalhistory.usedIn.name',
+                  id: 'field.collectionobjects_naturalhistory.accessionUsedIn.name',
                   defaultMessage: 'Used in',
                 },
               }),
@@ -1122,15 +1122,15 @@ export default (configContext) => {
               },
             },
           },
-          materialType: {
+          accessionUsematerialType: {
             [config]: {
               messages: defineMessages({
                 fullName: {
-                  id: 'field.collectionobjects_naturalhistory.materialType.fullName',
+                  id: 'field.collectionobjects_naturalhistory.accessionUsematerialType.fullName',
                   defaultMessage: 'Accession use material type',
                 },
                 name: {
-                  id: 'field.collectionobjects_naturalhistory.materialType.name',
+                  id: 'field.collectionobjects_naturalhistory.accessionUsematerialType.name',
                   defaultMessage: 'Material type',
                 },
               }),
@@ -1142,16 +1142,16 @@ export default (configContext) => {
               },
             },
           },
-          requestDate: {
+          accessionUserequestDate: {
             [config]: {
               dataType: DATA_TYPE_DATE,
               messages: defineMessages({
                 fullName: {
-                  id: 'field.collectionobjects_naturalhistory.requestDate.fullName',
+                  id: 'field.collectionobjects_naturalhistory.accessionUserequestDate.fullName',
                   defaultMessage: 'Accession use request date',
                 },
                 name: {
-                  id: 'field.collectionobjects_naturalhistory.requestDate.name',
+                  id: 'field.collectionobjects_naturalhistory.accessionUserequestDate.name',
                   defaultMessage: 'Request date',
                 },
               }),
@@ -1160,16 +1160,16 @@ export default (configContext) => {
               },
             },
           },
-          filledDate: {
+          accessionUsefilledDate: {
             [config]: {
               dataType: DATA_TYPE_DATE,
               messages: defineMessages({
                 fullName: {
-                  id: 'field.collectionobjects_naturalhistory.filledDate.fullName',
+                  id: 'field.collectionobjects_naturalhistory.accessionUsefilledDate.fullName',
                   defaultMessage: 'Accession use filled date',
                 },
                 name: {
-                  id: 'field.collectionobjects_naturalhistory.filledDate.name',
+                  id: 'field.collectionobjects_naturalhistory.accessionUsefilledDate.name',
                   defaultMessage: 'Filled date',
                 },
               }),
@@ -1178,15 +1178,15 @@ export default (configContext) => {
               },
             },
           },
-          useNotes: {
+          accessionUseNotes: {
             [config]: {
               messages: defineMessages({
                 fullName: {
-                  id: 'field.collectionobjects_naturalhistory.useNotes.fullName',
+                  id: 'field.collectionobjects_naturalhistory.accessionUseNotes.fullName',
                   defaultMessage: 'Accession use note',
                 },
                 name: {
-                  id: 'field.collectionobjects_naturalhistory.useNotes.name',
+                  id: 'field.collectionobjects_naturalhistory.accessionUseNotes.name',
                   defaultMessage: 'Note',
                 },
               }),
