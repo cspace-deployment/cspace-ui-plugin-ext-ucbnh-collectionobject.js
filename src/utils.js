@@ -14,9 +14,9 @@ export const computeHybridName = ({ data }, Immutable, formatRefName) => {
     const taxonName = formatRefName(taxonomicIdentGroup.get('taxon')) || '';
 
     if (hybridFlag !== 'true' && hybridFlag !== true) {
-      if (affinityTaxon === null) {
+      if (affinityTaxon === null || affinityTaxon === '') {
         taxonomicIdentHybridName = taxonName;
-      } if (affinityTaxon !== null) {
+      } else {
         taxonomicIdentHybridName = affinityTaxon;
       }
     } else {
@@ -57,11 +57,11 @@ export const computeHybridName = ({ data }, Immutable, formatRefName) => {
         }
       }
 
-      const updatedTaxonomicGroupMap = Immutable.fromJS({
-        taxonomicIdentHybridName,
-      });
-      newTaxonGroup.push(taxonomicIdentGroup.merge(updatedTaxonomicGroupMap));
     }
+    const updatedTaxonomicGroupMap = Immutable.fromJS({
+      taxonomicIdentHybridName,
+    });
+    newTaxonGroup.push(taxonomicIdentGroup.merge(updatedTaxonomicGroupMap));
   }
 
   return Immutable.fromJS({

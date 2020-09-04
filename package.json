@@ -1,6 +1,6 @@
 {
   "name": "cspace-ui-plugin-ext-ucbnh-collectionobject",
-  "version": "2.0.0-rc.1",
+  "version": "2.0.0-rc.2",
   "description": "UC Berkeley Natural History Collection Object extension plugin for the CollectionSpace UI",
   "author": "Ray Lee <rhlee@berkeley.edu>",
   "license": "ECL-2.0",
