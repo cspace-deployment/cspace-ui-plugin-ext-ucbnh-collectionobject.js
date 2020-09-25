@@ -1,27 +1,6 @@
 import { defineMessages } from 'react-intl';
 
 export default {
-  accessionUseTypes: {
-    values: [
-      'class',
-      'research',
-      'other',
-    ],
-    messages: defineMessages({
-      class: {
-        id: 'option.accessionUseTypes.class',
-        defaultMessage: 'class',
-      },
-      research: {
-        id: 'option.accessionUseTypes.research',
-        defaultMessage: 'research',
-      },
-      other: {
-        id: 'option.accessionUseTypes.other',
-        defaultMessage: 'other',
-      },
-    }),
-  },
   annotationTypes: {
     values: [
       'additional taxa',

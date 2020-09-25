@@ -56,7 +56,6 @@ export const computeHybridName = ({ data }, Immutable, formatRefName) => {
           taxonomicIdentHybridName = `${affinityTaxon} × ${maleParent}`;
         }
       }
-
     }
     const updatedTaxonomicGroupMap = Immutable.fromJS({
       taxonomicIdentHybridName,
