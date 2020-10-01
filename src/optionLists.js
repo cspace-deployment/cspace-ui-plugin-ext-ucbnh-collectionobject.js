@@ -4,12 +4,18 @@ export default {
   annotationTypes: {
     values: [
       'additional taxa',
+      'annotation history',
+      'associated species',
+      'color',
       'deaccession',
       'holotype location',
       'image made',
+      'map',
+      'micromorphology',
       'nomenclature',
       'number collision',
       'population biology',
+      'reproductive biology',
       'type',
       'Vegetation Type Map Project',
     ],
@@ -17,6 +23,18 @@ export default {
       'additional taxa': {
         id: 'option.annotationTypes.additional taxa',
         defaultMessage: 'additional taxa',
+      },
+      'annotation history': {
+        id: 'option.annotationTypes.annotation history',
+        defaultMessage: 'annotation history',
+      },
+      'associated species': {
+        id: 'option.annotationTypes.associated species',
+        defaultMessage: 'associated species',
+      },
+      color: {
+        id: 'option.annotationTypes.color',
+        defaultMessage: 'color',
       },
       deaccession: {
         id: 'option.annotationTypes.deaccession',
@@ -30,6 +48,14 @@ export default {
         id: 'option.annotationTypes.image made',
         defaultMessage: 'image made',
       },
+      map: {
+        id: 'option.annotationTypes.map',
+        defaultMessage: 'map',
+      },
+      micromorphology: {
+        id: 'option.annotationTypes.micromorphology',
+        defaultMessage: 'micromorphology',
+      },
       nomenclature: {
         id: 'option.annotationTypes.nomenclature',
         defaultMessage: 'nomenclature',
@@ -41,6 +67,10 @@ export default {
       'population biology': {
         id: 'option.annotationTypes.population biology',
         defaultMessage: 'population biology',
+      },
+      'reproductive biology': {
+        id: 'option.annotationTypes.reproductive biology',
+        defaultMessage: 'reproductive biology',
       },
       type: {
         id: 'option.annotationTypes.type',
