@@ -14,11 +14,11 @@ export const computeHybridName = ({ data }, Immutable, formatRefName) => {
     const taxonName = formatRefName(taxonomicIdentGroup.get('taxon')) || '';
 
     if (hybridFlag !== 'true' && hybridFlag !== true) {
-      if (affinityTaxon === null || affinityTaxon === '') {
-        taxonomicIdentHybridName = taxonName;
-      } else {
-        taxonomicIdentHybridName = affinityTaxon;
-      }
+      // if (affinityTaxon === null || affinityTaxon === '') {
+        // taxonomicIdentHybridName = taxonName;
+      // } else {
+        taxonomicIdentHybridName = '';
+      // }
     } else {
       // Get the parent group
       const parentGroupList = taxonomicIdentGroup.getIn(['taxonomicIdentHybridParentGroupList', 'taxonomicIdentHybridParentGroup']);
