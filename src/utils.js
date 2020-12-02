@@ -11,10 +11,9 @@ export const computeHybridName = ({ data }, Immutable, formatRefName) => {
 
     const hybridFlag = taxonomicIdentGroup.get('hybridFlag') || '';
     const affinityTaxon = formatRefName(taxonomicIdentGroup.get('affinityTaxon')) || '';
-    const taxonName = formatRefName(taxonomicIdentGroup.get('taxon')) || '';
 
     if (hybridFlag !== 'true' && hybridFlag !== true) {
-        taxonomicIdentHybridName = '';
+      taxonomicIdentHybridName = '';
     } else {
       // Get the parent group
       const parentGroupList = taxonomicIdentGroup.getIn(['taxonomicIdentHybridParentGroupList', 'taxonomicIdentHybridParentGroup']);
